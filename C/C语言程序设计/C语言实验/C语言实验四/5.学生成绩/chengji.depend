@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1545967426 source:c:\users\zam90\desktop\chengji\main.c
+	<stdio.h>
+
+1546567172 source:c:\users\zam90\desktop\实验四\5.学生成绩\main.c
+	<stdio.h>
+	<stdlib.h>
+

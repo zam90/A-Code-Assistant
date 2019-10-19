@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1546002008 source:c:\users\zam90\desktop\tongjidancigeshu\main.c
+	<stdio.h>
+	<string.h>
+
+1546004405 source:c:\users\zam90\desktop\统计单词个数\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
