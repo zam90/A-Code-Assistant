@@ -1,0 +1,5 @@
+package cn.campsg.practical.bubble.service;
+
+public class Configuration {
+
+}
