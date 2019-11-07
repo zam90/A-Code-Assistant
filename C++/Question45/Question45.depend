@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1573132482 source:f:\github\a-code-assistant\c++\question45\main.cpp
+	<iostream>
+	<stdio.h>
+
