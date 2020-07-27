@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1583834051 source:f:\github\a-code-assistant\c++\kongfuwordgame\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

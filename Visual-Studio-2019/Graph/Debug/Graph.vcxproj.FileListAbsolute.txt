@@ -1,0 +1,2 @@
+F:\GitHub\A-Code-Assistant\Visual-Studio-2019\Graph\Debug\Graph.exe
+F:\GitHub\A-Code-Assistant\Visual-Studio-2019\Graph\Debug\Graph.pdb

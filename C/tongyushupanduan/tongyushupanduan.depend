@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1583564438 source:f:\github\a-code-assistant\c++\tongyushupanduan\main.c
+	<stdio.h>
+	<stdlib.h>
+
