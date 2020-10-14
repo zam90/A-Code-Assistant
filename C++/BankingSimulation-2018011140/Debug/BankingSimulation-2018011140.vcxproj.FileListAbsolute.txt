@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\BankingSimulation-2018011140\Debug\BankingSimulation-2018011140.exe
+F:\A-Code-Assistant\Visual-Studio-2019\BankingSimulation-2018011140\Debug\BankingSimulation-2018011140.pdb

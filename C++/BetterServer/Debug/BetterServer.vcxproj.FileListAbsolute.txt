@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\BetterServer\Debug\BetterServer.exe
+F:\A-Code-Assistant\Visual-Studio-2019\BetterServer\Debug\BetterServer.pdb

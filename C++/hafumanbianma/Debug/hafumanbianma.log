@@ -1,0 +1,7 @@
+﻿  main.cpp
+F:\A-Code-Assistant\Visual-Studio-2019\hafumanbianma\main.cpp(60,1): warning C4326: “main”的返回类型应为“int”而非“void”
+F:\A-Code-Assistant\Visual-Studio-2019\hafumanbianma\main.cpp(87,11): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+F:\A-Code-Assistant\Visual-Studio-2019\hafumanbianma\main.cpp(87,11): message : 占位符和其参数预计 3 可变参数，但提供的却是 2 参数
+F:\A-Code-Assistant\Visual-Studio-2019\hafumanbianma\main.cpp(87,11): message : 缺失的可变参数 3 为格式字符串“%c”所需
+F:\A-Code-Assistant\Visual-Studio-2019\hafumanbianma\main.cpp(87,11): message : 此参数用作缓冲区大小
+  hafumanbianma.vcxproj -> F:\A-Code-Assistant\Visual-Studio-2019\hafumanbianma\Debug\hafumanbianma.exe

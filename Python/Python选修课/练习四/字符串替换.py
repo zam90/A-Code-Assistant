@@ -1,0 +1,5 @@
+str1=input()
+str2=input()
+text = input()
+text = text.replace(str1,str2)
+print(text)

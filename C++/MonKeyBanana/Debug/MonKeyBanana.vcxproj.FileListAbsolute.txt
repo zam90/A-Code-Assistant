@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\MonKeyBanana\Debug\MonKeyBanana.exe
+F:\A-Code-Assistant\Visual-Studio-2019\MonKeyBanana\Debug\MonKeyBanana.pdb

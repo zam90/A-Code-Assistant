@@ -1,0 +1,14 @@
+﻿  FileIn-double.cpp
+  FileIn-int.cpp
+  FileOut-double.cpp
+  FileOut-int.cpp
+  RandomData-double.cpp
+  RandomData-int.cpp
+  Sort-double.cpp
+  Sort-int.cpp
+  test.cpp
+F:\A Code Assistant\Visual Studio 2019\SortData\test.cpp(6,12): warning C4101: “p”: 未引用的局部变量
+F:\A Code Assistant\Visual Studio 2019\SortData\test.cpp(6,9): warning C4101: “j”: 未引用的局部变量
+  正在生成代码...
+F:\A Code Assistant\Visual Studio 2019\SortData\test.cpp(6,6): warning C4101: “i”: 未引用的局部变量
+  SortData.vcxproj -> F:\A Code Assistant\Visual Studio 2019\SortData\Debug\SortData.exe

@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\Traffic\Debug\Traffic.exe
+F:\A-Code-Assistant\Visual-Studio-2019\Traffic\Debug\Traffic.pdb

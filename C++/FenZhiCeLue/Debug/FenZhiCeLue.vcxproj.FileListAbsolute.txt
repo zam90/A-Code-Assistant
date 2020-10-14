@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\FenZhiCeLue\Debug\FenZhiCeLue.exe
+F:\A-Code-Assistant\Visual-Studio-2019\FenZhiCeLue\Debug\FenZhiCeLue.pdb

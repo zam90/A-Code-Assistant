@@ -1,0 +1,5 @@
+l=input()
+w=input()
+l=float(l)
+w=float(w)
+print("%.2f"%(l*w))

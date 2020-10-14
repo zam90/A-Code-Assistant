@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\HFM\Debug\HFM.exe
+F:\A-Code-Assistant\Visual-Studio-2019\HFM\Debug\HFM.pdb

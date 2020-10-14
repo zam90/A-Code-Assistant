@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainPane" accessibleRole="TEXT" maxHeight="800.0" maxWidth="480.0" minHeight="800.0" minWidth="480.0" prefHeight="800.0" prefWidth="480.0" stylesheets="@../css/skin2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FlowPane alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="480.0">
+         <children>
+            <Label id="lblCheckpoint" minWidth="100.0" text="第1关">
+               <FlowPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="目标">
+               <FlowPane.margin>
+                  <Insets left="70.0" top="20.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="targetScore" maxWidth="150.0" minWidth="100.0" text="1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </FlowPane.margin>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <FlowPane.margin>
+                  <Insets left="75.0" top="20.0" />
+               </FlowPane.margin>
+               <image>
+                  <Image url="@../img/money_plus.png" />
+               </image>
+            </ImageView>
+         </children></FlowPane>
+      <FlowPane layoutY="75.0" prefHeight="60.0" prefWidth="480.0">
+         <children>
+            <Label id="lblScore" prefWidth="235.0" style="-fx-font-size: 16; -fx-alignment: center;" text="分数：0">
+               <FlowPane.margin>
+                  <Insets left="110.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/bomb.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/paint.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/rainbow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </FlowPane>
+      <FlowPane id="message_title" layoutY="120.0" prefHeight="60.0" prefWidth="480.0" styleClass="title">
+         <children>
+            <Label id="lblMessage" alignment="CENTER" prefHeight="60.0" prefWidth="480.0" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children>
+      </FlowPane>
+      <AnchorPane id="game_pane" layoutY="205.0" maxHeight="480.0" maxWidth="480.0" minHeight="480.0" minWidth="480.0" prefHeight="480.0" prefWidth="480.0" stylesheets="@../css/skin2.css" />
+      <FlowPane id="bottom" layoutY="730.0" prefHeight="60.0" prefWidth="480.0">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/csg.png" />
+               </image>
+               <FlowPane.margin>
+                  <Insets left="120.0" right="10.0" />
+               </FlowPane.margin>
+            </ImageView>
+            <Label text="技术支持：www.campsg.cn" />
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

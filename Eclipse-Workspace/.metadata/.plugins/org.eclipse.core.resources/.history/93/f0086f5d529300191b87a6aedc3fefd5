@@ -1,6 +1,0 @@
-package cn.campsg.practical.bubble.service;
-
-public class Configuration {
-	public final String COPA = "score.conf";
-	
-}

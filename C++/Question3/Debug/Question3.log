@@ -1,0 +1,5 @@
+﻿  question3.cpp
+F:\A-Code-Assistant\Visual-Studio-2019\Question3\question3.cpp(18,19): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+F:\A-Code-Assistant\Visual-Studio-2019\Question3\question3.cpp(81,22): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+F:\A-Code-Assistant\Visual-Studio-2019\Question3\question3.cpp(102,17): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+  Question3.vcxproj -> F:\A-Code-Assistant\Visual-Studio-2019\Question3\Debug\Question3.exe

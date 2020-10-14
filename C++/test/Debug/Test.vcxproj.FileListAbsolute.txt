@@ -1,0 +1,2 @@
+F:\A-Code-Assistant\Visual-Studio-2019\Test\Debug\Test.exe
+F:\A-Code-Assistant\Visual-Studio-2019\Test\Debug\Test.pdb

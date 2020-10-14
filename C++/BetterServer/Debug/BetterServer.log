@@ -1,0 +1,4 @@
+﻿  main.cpp
+F:\A-Code-Assistant\Visual-Studio-2019\BetterServer\main.cpp(31,1): warning C4326: “main”的返回类型应为“int”而非“void”
+F:\A-Code-Assistant\Visual-Studio-2019\BetterServer\main.cpp(45,12): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  BetterServer.vcxproj -> F:\A-Code-Assistant\Visual-Studio-2019\BetterServer\Debug\BetterServer.exe
