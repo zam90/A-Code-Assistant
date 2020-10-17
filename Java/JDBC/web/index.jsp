@@ -3,57 +3,37 @@
 
 <body>
 <%
-    out.print("123456789");
-
-  String driver = "com.mysql.jdbc.Driver";
-
-// URL指向要访问的数据库名test1
-
-  String url = "jdbc:mysql://127.0.0.1:3306/swdata";
-
-// MySQL配置时的用户名
-
-  String user = "swdata";
-
-// Java连接MySQL配置时的密码
-
-  String password = "aBzBnrCC1ov2sVvA";
-
+  //数据库url、用户名和密码
+  String DB_URL="jdbc:mysql://localhost:3306/swdata?serverTimezone=Asia/Shanghai";
+  String USER="root";
+  String PASS="123456";
   try {
-// 1 加载驱动程序
+    //1、注册JDBC驱动
 
-    Class.forName(driver);
+    Class.forName("com.mysql.jdbc.Driver");
+    //2、获取数据库连接
+    Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+    //3、操作数据库
+    Statement statement = connection.createStatement();//获取操作数据库的对象
+    String sql="select * from product";
+    ResultSet resultSet = statement.executeQuery(sql);//执行sql，获取结果集
 
-// 2 连接数据库
-
-    Connection conn = DriverManager.getConnection(url, user, password);
-
-// 3 用来执行SQL语句
-
-    Statement statement = conn.createStatement();
-
-// 要执行的SQL语句
-
-    String sql = "select * from product";
-
-    ResultSet rs = statement.executeQuery(sql);
-    String name = null;
-    String mima = null;
-    while (rs.next()) {
-      name = rs.getString("userName");
-      mima = rs.getString("passWord");
-      out.print(name+"\t"+mima);
+    while(resultSet.next()){ //遍历结果集，取出数据
+      String productID = resultSet.getString("productID");
+      //输出数据0
+      out.print("产品编号："+productID);
+      out.println();
     }
-    rs.close();
-    conn.close();
+    //4、关闭结果集、数据库操作对象、数据库连接
+    resultSet.close();
+    statement.close();
+    connection.close();
   } catch (ClassNotFoundException e) {
-    System.out.println("Sorry,can`t find the Driver!");
     e.printStackTrace();
-  } catch (SQLException e) {
+  } catch(SQLException e){
     e.printStackTrace();
-  } catch (Exception e) {
+  } catch(Exception e){
     e.printStackTrace();
   }
-
 %>
 </body>
