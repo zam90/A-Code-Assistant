@@ -3,7 +3,7 @@
 
 <body>
 <%
-
+    out.print("123456789");
 
   String driver = "com.mysql.jdbc.Driver";
 
@@ -42,7 +42,7 @@
     while (rs.next()) {
       name = rs.getString("userName");
       mima = rs.getString("passWord");
-      System.out.print(name+"\t"+mima);
+      out.print(name+"\t"+mima);
     }
     rs.close();
     conn.close();
