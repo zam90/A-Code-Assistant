@@ -19,5 +19,23 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library name="MYSQLconnector">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/build/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/demo/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/generated/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/legacy/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/main/core-api/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/main/core-impl/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/main/protocol-impl/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/main/user-api/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/main/user-impl/java" />
+          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21.zip!/mysql-connector-java-8.0.21/src/test/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
