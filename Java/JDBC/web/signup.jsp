@@ -4,14 +4,14 @@
 
 <!--标题-->
 <head>
-    <title>信息注册</title>
+    <title>注册</title>
     <meta charset="utf-8">
     <script language="JavaScript" src="test.js"></script>
 </head>
 
 <body>
 
-<h2  align="center">注册信息</h2>
+<h2  align="center">注册</h2>
 <form name="inf" action="signupJDBC.jsp"><!--信息表单-->
     <p>
     <table cellspacing="6" cellpadding="6" align="center">
