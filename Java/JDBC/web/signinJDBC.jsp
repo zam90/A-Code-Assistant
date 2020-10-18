@@ -21,14 +21,15 @@
         String sql="select password from student where sid=?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setInt(1,sid);
-        ResultSet result = pstmt.executeQuery(sql);
-        String password1 = result.getString("password");
-
-        if(Objects.equals(password, password1)){
-            response.sendRedirect("signinsuccess.jsp");
-        }
-        else{
-            response.sendRedirect("signinfail.jsp");
+        ResultSet result = pstmt.executeQuery();
+        while(result.next()){ //遍历结果集，取出数据
+            String pass = result.getString("password");
+            if(Objects.equals(password, pass)){
+                response.sendRedirect("signinsuccess.jsp");
+            }
+            else{
+                response.sendRedirect("signinfail.jsp");
+            }
         }
         //5、关闭数据库操作对象、数据库连接
         result.close();
