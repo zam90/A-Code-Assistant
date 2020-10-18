@@ -13,7 +13,7 @@
 </head>
 <body>
 <br>
-<h1><center>注册成功！</center></h1>>
-<h3><center>请等待页面自动跳转...</center></h3>>
+<h1><center>注册成功！</center></h1>
+<h3><center>请等待页面自动跳转...</center></h3>
 </body>
 </html>
