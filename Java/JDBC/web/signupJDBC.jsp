@@ -27,8 +27,8 @@
         pstmt.setString(3,sex);
         pstmt.setString(4,password);
         int n = pstmt.executeUpdate();
-        if(n==1){out.print("数据插入成功！");}
-        else{out.print("数据插入失败！");}
+        if(n==1){response.sendRedirect("signupsuccess.jsp");}
+        else{out.print("数据插入失败!");}
         //5、关闭数据库操作对象、数据库连接
         statement.close();
         connection.close();
