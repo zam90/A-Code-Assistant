@@ -21,9 +21,9 @@ public class JDBC {
             ResultSet resultSet = statement.executeQuery(sql);//执行sql，获取结果集
 
             while(resultSet.next()){ //遍历结果集，取出数据
-                String productID = resultSet.getString("productID");
+                String productName = resultSet.getString("productName");
                 //输出数据0
-                System.out.print("产品编号："+productID);
+                System.out.print("产品编号："+productName);
                 System.out.println();
             }
             //4、关闭结果集、数据库操作对象、数据库连接

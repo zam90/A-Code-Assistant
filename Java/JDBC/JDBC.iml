@@ -22,11 +22,13 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../Dependence/mysql-connector-java-8.0.21/mysql-connector-java-8.0.21.jar!/" />
+          <root url="file://$MODULE_DIR$/web/WEB-INF/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="Tomcat 10.0.1-M9" level="application_server_libraries" />
   </component>
 </module>

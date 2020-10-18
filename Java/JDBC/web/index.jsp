@@ -9,7 +9,6 @@
   String PASS="123456";
   try {
     //1、注册JDBC驱动
-
     Class.forName("com.mysql.jdbc.Driver");
     //2、获取数据库连接
     Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -17,7 +16,6 @@
     Statement statement = connection.createStatement();//获取操作数据库的对象
     String sql="select * from product";
     ResultSet resultSet = statement.executeQuery(sql);//执行sql，获取结果集
-
     while(resultSet.next()){ //遍历结果集，取出数据
       String productID = resultSet.getString("productID");
       //输出数据0
