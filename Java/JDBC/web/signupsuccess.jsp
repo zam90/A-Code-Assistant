@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<meta http-equiv="Refresh" content="2,url=signin.jsp">
+<meta http-equiv="Refresh" content="1,url=signin.jsp">
 <head>
     <title>注册成功</title>
 </head>

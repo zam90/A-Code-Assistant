@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ page import="java.sql.*" %>
+<%@ page import="jakarta.servlet.http.Cookie" %>
 
 <body>
 <%
@@ -25,6 +26,9 @@
         while(result.next()){ //遍历结果集，取出数据
             String pass = result.getString("password");
             if(Objects.equals(password, pass)){
+                String cooki = String.valueOf(sid);
+                Cookie access = new Cookie("Accessinid", cooki);
+                response.addCookie(access);
                 response.sendRedirect("signinsuccess.jsp");
             }
             else{

@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<meta http-equiv="Refresh" content="2,url=index.jsp">
+<meta http-equiv="Refresh" content="1,url=index.jsp">
 <head>
     <title>登录成功</title>
 </head>
