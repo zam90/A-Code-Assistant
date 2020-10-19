@@ -9,11 +9,11 @@
 <html>
 <meta http-equiv="Refresh" content="1,url=signin.jsp">
 <head>
-    <title>登录失败</title>
+    <title>删除成功</title>
 </head>
 <body>
 <br>
-<h1><center>登录失败！</center></h1>
-<h3><center>请返回重新登录...</center></h3>
+<h1><center>删除成功！</center></h1>
+<h3><center>请等待页面自动跳转...</center></h3>
 </body>
 </html>

@@ -39,12 +39,12 @@
             String sex = result.getString("sex");
             String password = result.getString("password");
             %>
-<h2  align="center">登录</h2>
-<form name="inf" action="signinJDBC.jsp"><!--信息表单-->
+<h2  align="center">个人信息</h2>
+<form name="inf" action="updateJDBC.jsp"><!--信息表单-->
   <p>
   <table cellspacing="6" cellpadding="6" align="center">
     <tr><td align="right">学号：</td><td><input type="text" name="sid" value="<%=sid%>"></td></tr>
-    <tr><td align="right">姓名：</td><td><input type="text" name="sid" value="<%=sname%>"></td></tr>
+    <tr><td align="right">姓名：</td><td><input type="text" name="sname" value="<%=sname%>"></td></tr>
     <tr><td align="right">密码：</td><td><input type="password" name="password"></td></tr>
   </table>
   </p>
@@ -53,6 +53,9 @@
     <tr>
       <td><input type="Button" value="修改" onclick=submit()></td>
     </tr>
+      <tr>
+          <td><a href="deleteJDBC.jsp"><input type="Button" value="删除"></a></td>
+      </tr>
   </table>
 </form>
             <%
