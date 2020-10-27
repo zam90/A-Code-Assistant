@@ -86,6 +86,26 @@ public class LoginActivity extends AppCompatActivity{
                     //结束当前活动
                     finish();
                 }
+                if(account.equals("ZJY")&&password.equals("123456")){
+                    editor=pref.edit();
+                    //“是否保存密码”勾选
+                    if(savePassword.isChecked()){
+                        editor.putBoolean("save_password",true);
+                        editor.putString("account",account);
+                        editor.putString("password",password);
+                    }
+                    else{
+                        editor.clear();
+                    }
+                    //提交完成数据存储
+                    editor.apply();
+                    //显示登录成功并跳转到主界面活动
+                    Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    //结束当前活动
+                    finish();
+                }
                 //用户名或密码错误
                 else{
                     Toast.makeText(LoginActivity.this,"登录失败,请重新输入！",Toast.LENGTH_SHORT).show();
