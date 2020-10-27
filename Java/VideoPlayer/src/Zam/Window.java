@@ -55,18 +55,18 @@ public class Window extends JFrame {
      */
     public Window() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 640, 480);
+        setBounds(100, 100, 960, 540);
 
         menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
-        menu = new JMenu("\u6587\u4EF6");
+        menu = new JMenu("选项");
         menuBar.add(menu);
 
-        openmenu = new JMenuItem("\u6253\u5F00");
+        openmenu = new JMenuItem("打开文件");
         menu.add(openmenu);
 
-        closemenu = new JMenuItem("\u9000\u51FA");
+        closemenu = new JMenuItem("退出程序");
         menu.add(closemenu);
 
         openmenu.addActionListener(new ActionListener() {
@@ -111,13 +111,13 @@ public class Window extends JFrame {
         controlpanel = new JPanel();
         panel.add(controlpanel);
 
-        btnStop = new JButton("stop");
+        btnStop = new JButton("停止");
         controlpanel.add(btnStop);
 
-        btnPlay = new JButton("play");
+        btnPlay = new JButton("播放");
         controlpanel.add(btnPlay);
 
-        btnPause = new JButton("pause");
+        btnPause = new JButton("暂停");
         controlpanel.add(btnPause);
 
         slider = new JSlider();
