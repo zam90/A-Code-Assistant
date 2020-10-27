@@ -32,12 +32,14 @@ public class diaryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     //这是有日记展示的Holder
     static class ViewHolder extends RecyclerView.ViewHolder{
         CardView cardView;
+        TextView diaryTitle;
         TextView diaryContent;
         TextView diaryTime;
         CheckBox checkBox;
         public ViewHolder(View view){
             super(view);
             cardView=(CardView)view;
+            diaryTitle=(TextView)view.findViewById(R.id.diary_title);
             diaryContent=(TextView)view.findViewById(R.id.diary_content);
             diaryTime=(TextView)view.findViewById(R.id.diary_time);
             checkBox=(CheckBox)view.findViewById(R.id.check_box);
@@ -108,6 +110,7 @@ public class diaryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 ((ViewHolder) holder).checkBox.setVisibility(View.GONE);
             }
             diary mDiary=mDiaryList.get(position);
+            ((ViewHolder) holder).diaryTitle.setText(mDiary.getTitle());
             ((ViewHolder) holder).diaryContent.setText(mDiary.getContent());
             ((ViewHolder) holder).diaryTime.setText(mDiary.getTime());
         }

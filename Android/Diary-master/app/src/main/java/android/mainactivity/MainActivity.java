@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this, EditActivity.class);
+                intent.putExtra("diaryTitle","");//传入日记标题，这里为空
                 intent.putExtra("diaryContent","");//传入日记内容，这里为空
                 intent.putExtra("signal",0);//传入‘新建’标志：0
                 startActivity(intent);
@@ -86,9 +87,12 @@ public class MainActivity extends AppCompatActivity {
                 if(!isDeleteState&&diaryList.size()>0){
                     // 普通点击事件
                     diary mDiary=diaryList.get(position);
+                    String diaryTitle=mDiary.getTitle().toString();
                     String diaryContent=mDiary.getContent().toString();
                     String diaryTime=mDiary.getTime().toString();
                     Intent intent=new Intent(MainActivity.this,EditActivity.class);
+                    //传递标题
+                    intent.putExtra("diaryTitle",diaryTitle);
                     //传递内容
                     intent.putExtra("diaryContent",diaryContent);
                     //传入修改标志1：表示修改原有日记内容
@@ -101,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         checkBox.setChecked(false);
                         str.remove(position);
                     } else {
+                        str.put(position,diaryAdapter.mDiaryList.get(position).getTitle());
                         str.put(position,diaryAdapter.mDiaryList.get(position).getContent());
                         checkBox.setChecked(true);
                     }
@@ -122,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                     //第二个参数为true表示长按进入多选删除状态时的适配器初始化
                     adapter=new diaryAdapter(diaryList,true);
                     recyclerView.setAdapter(adapter);
+                    str.put(position,diaryAdapter.mDiaryList.get(position).getTitle());
                     str.put(position,diaryAdapter.mDiaryList.get(position).getContent());
                 }
             }

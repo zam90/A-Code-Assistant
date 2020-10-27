@@ -17,11 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--展示日记的标题-->
+            <TextView
+                android:id="@+id/diary_title"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"/>
+
             <!--展示日记的缩略内容-->
             <TextView
                 android:id="@+id/diary_content"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:layout_margin="5dp"/>
 
             <!--日记的书写时间-->

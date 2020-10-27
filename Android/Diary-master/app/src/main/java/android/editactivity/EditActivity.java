@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 public class EditActivity extends AppCompatActivity {
 
     //接收上个活动传入的日记内容
+    private String diaryTitle;
     private String diaryContent;
     //接收上个活动传入的标志
     private int signal=0;
@@ -38,10 +39,12 @@ public class EditActivity extends AppCompatActivity {
             //点击保存
             case R.id.save_button: {
                 EditText editText=(EditText)findViewById(R.id.edit_content);
+                EditText editTitle=(EditText)findViewById(R.id.edit_title);
+                String title=editTitle.getText().toString();
                 String content=editText.getText().toString();
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日");
                 String time=sdf.format(new java.util.Date());
-                diary mDiary=new diary(content,time);
+                diary mDiary=new diary(title,content,time);
                 //点击’新建‘后编辑的内容就存储
                 if(signal==0) {
                     mDiary.save();
@@ -54,6 +57,8 @@ public class EditActivity extends AppCompatActivity {
                     signal=3;
                     ContentValues values = new ContentValues();
                     values.put("time", mDiary.getTime().toString());
+                    DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
+                    values.put("title", mDiary.getTitle().toString());
                     DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
                     values.put("content", mDiary.getContent().toString());
                     DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
@@ -78,16 +83,19 @@ public class EditActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             EditText editText=(EditText)findViewById(R.id.edit_content);
+                            String title=editText.getText().toString();
                             String content=editText.getText().toString();
                             SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日");
                             String time=sdf.format(new java.util.Date());
-                            diary mDiary=new diary(content,time);
+                            diary mDiary=new diary(title,content,time);
                             if(signal==0){
                                 mDiary.save();
                             }else{
                                 ContentValues values = new ContentValues();
                                 values.put("time", mDiary.getTime().toString());
                                 DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
+                                values.put("title", mDiary.getTitle().toString());
+                                DataSupport.updateAll(diary.class,values,"title=?",diaryTitle);
                                 values.put("content", mDiary.getContent().toString());
                                 DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
                             }
@@ -114,6 +122,7 @@ public class EditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit);
         //接收由MainActivity传来的日记信息
         Intent intent=getIntent();
+        diaryTitle=intent.getStringExtra("diaryTitle");
         diaryContent=intent.getStringExtra("diaryContent");
         signal=intent.getIntExtra("signal",0);
         Toolbar toolbar=(Toolbar)findViewById(R.id.edit_toolbar);
@@ -132,6 +141,16 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editText.setCursorVisible(true);
+            }
+        });
+        final EditText editTitle=(EditText)findViewById(R.id.edit_title);
+        editTitle.setText(diaryTitle);
+        //光标放文本后面
+        editTitle.setSelection(editTitle.getText().length());
+        editTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editTitle.setCursorVisible(true);
             }
         });
     }
