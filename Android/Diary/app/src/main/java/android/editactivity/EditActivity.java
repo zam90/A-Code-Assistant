@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.mainactivity.KeyboardUtils;
+import android.mainactivity.MainActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,9 @@ import android.view.MenuItem;
 import android.mainactivity.diary;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.zamcenter.app.diary.LoginActivity;
 import com.zamcenter.app.diary.R;
 import org.litepal.crud.DataSupport;
 import java.text.SimpleDateFormat;
@@ -42,7 +46,7 @@ public class EditActivity extends AppCompatActivity {
                 EditText editTitle=(EditText)findViewById(R.id.edit_title);
                 String title=editTitle.getText().toString();
                 String content=editText.getText().toString();
-                SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日");
+                SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
                 String time=sdf.format(new java.util.Date());
                 diary mDiary=new diary(title,content,time);
                 //点击’新建‘后编辑的内容就存储
@@ -50,6 +54,10 @@ public class EditActivity extends AppCompatActivity {
                     mDiary.save();
                     //防止连续点击’存储‘按钮连续存储一样的内容
                     signal=3;
+                    //显示登录成功并跳转到主界面活动
+                    Toast.makeText(EditActivity.this,"保存成功！",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(EditActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
                 //更新原有内容的就只更新
                 else{
@@ -62,6 +70,10 @@ public class EditActivity extends AppCompatActivity {
                     DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
                     values.put("content", mDiary.getContent().toString());
                     DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
+                    //显示登录成功并跳转到主界面活动
+                    Toast.makeText(EditActivity.this,"保存成功！",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(EditActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
                 //隐藏光标并收起键盘
                 editText.setCursorVisible(false);

@@ -21,6 +21,8 @@
             <TextView
                 android:id="@+id/diary_title"
                 android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="15dp"
                 android:layout_height="20dp"
                 android:layout_margin="5dp"/>
 
@@ -28,12 +30,21 @@
             <TextView
                 android:id="@+id/diary_content"
                 android:layout_width="match_parent"
+                android:textSize="13dp"
                 android:layout_height="80dp"
                 android:layout_margin="5dp"/>
 
             <!--日记的书写时间-->
             <TextView
                 android:id="@+id/diary_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+
+            <!--日记的书写时间-->
+            <TextView
+                android:id="@+id/diary_author"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
