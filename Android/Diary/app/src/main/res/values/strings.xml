@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">还行日记</string>
+    <string name="empty_content">暂无日记！点击添加按钮添加日记吧！</string>
+</resources>
