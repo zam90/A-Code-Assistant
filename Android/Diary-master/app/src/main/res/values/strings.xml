@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">DiaryPractice</string>
-    <string name="empty_content">还没有数据，点击“新建”开始写日记吧！</string>
+    <string name="empty_content">暂无日记！点击添加按钮添加日记吧！</string>
 </resources>

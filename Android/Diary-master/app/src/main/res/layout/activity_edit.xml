@@ -21,10 +21,20 @@
 
     <!--定义一个内容编辑区-->
     <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:hint="想个主题？"
+        android:maxLines="1"/>
+
+    <!--定义一个内容编辑区-->
+    <EditText
         android:id="@+id/edit_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="start"
         android:textSize="18sp"
         android:hint="写点什么吧..."
