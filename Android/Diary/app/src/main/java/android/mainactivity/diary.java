@@ -11,11 +11,13 @@ public class diary extends DataSupport{
     private String title;
     private String content;
     private String time;
+    private String author;
 
-    public diary(String title, String content, String time) {
+    public diary(String title, String content, String time, String author) {
         this.title = title;
         this.content = content;
         this.time = time;
+        this.author = author;
     }
     public String getTitle() {
         return title;
@@ -41,4 +43,11 @@ public class diary extends DataSupport{
         this.time = time;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 }

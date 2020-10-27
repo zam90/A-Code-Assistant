@@ -2,8 +2,10 @@ package android.editactivity;
 
 import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.mainactivity.KeyboardUtils;
 import android.mainactivity.MainActivity;
 import android.support.v7.app.ActionBar;
@@ -27,6 +29,7 @@ public class EditActivity extends AppCompatActivity {
     //接收上个活动传入的日记内容
     private String diaryTitle;
     private String diaryContent;
+    private String author;
     //接收上个活动传入的标志
     private int signal=0;
 
@@ -46,9 +49,12 @@ public class EditActivity extends AppCompatActivity {
                 EditText editTitle=(EditText)findViewById(R.id.edit_title);
                 String title=editTitle.getText().toString();
                 String content=editText.getText().toString();
+                //获得用户名
+                SharedPreferences pref = getSharedPreferences("com.example.a15711.diarypractice_preferences", Context.MODE_PRIVATE);
+                String author = pref.getString("account","");
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
                 String time=sdf.format(new java.util.Date());
-                diary mDiary=new diary(title,content,time);
+                diary mDiary=new diary(title,content,time,author);
                 //点击’新建‘后编辑的内容就存储
                 if(signal==0) {
                     mDiary.save();
@@ -98,9 +104,12 @@ public class EditActivity extends AppCompatActivity {
                             EditText editTitle=(EditText)findViewById(R.id.edit_title);
                             String title=editTitle.getText().toString();
                             String content=editText.getText().toString();
-                            SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日");
+                            //获得用户名
+                            SharedPreferences pref = getSharedPreferences("com.example.a15711.diarypractice_preferences", Context.MODE_PRIVATE);
+                            String author = pref.getString("account","");
+                            SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
                             String time=sdf.format(new java.util.Date());
-                            diary mDiary=new diary(title,content,time);
+                            diary mDiary=new diary(title,content,time,author);
                             if(signal==0){
                                 mDiary.save();
                             }else{

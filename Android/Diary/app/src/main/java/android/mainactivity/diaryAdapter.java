@@ -31,6 +31,7 @@ public class diaryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         TextView diaryTitle;
         TextView diaryContent;
         TextView diaryTime;
+        TextView author;
         CheckBox checkBox;
         public ViewHolder(View view){
             super(view);
@@ -38,6 +39,7 @@ public class diaryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             diaryTitle=(TextView)view.findViewById(R.id.diary_title);
             diaryContent=(TextView)view.findViewById(R.id.diary_content);
             diaryTime=(TextView)view.findViewById(R.id.diary_time);
+            author=(TextView)view.findViewById(R.id.diary_author);
             checkBox=(CheckBox)view.findViewById(R.id.check_box);
         }
     }
@@ -109,6 +111,7 @@ public class diaryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             ((ViewHolder) holder).diaryTitle.setText(mDiary.getTitle());
             ((ViewHolder) holder).diaryContent.setText(mDiary.getContent());
             ((ViewHolder) holder).diaryTime.setText(mDiary.getTime());
+            ((ViewHolder) holder).author.setText(mDiary.getAuthor());
         }
     }
 

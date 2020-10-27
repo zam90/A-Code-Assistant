@@ -90,11 +90,14 @@ public class MainActivity extends AppCompatActivity {
                     String diaryTitle=mDiary.getTitle().toString();
                     String diaryContent=mDiary.getContent().toString();
                     String diaryTime=mDiary.getTime().toString();
+                    String author=mDiary.getAuthor().toString();
                     Intent intent=new Intent(MainActivity.this,EditActivity.class);
                     //传递标题
                     intent.putExtra("diaryTitle",diaryTitle);
                     //传递内容
                     intent.putExtra("diaryContent",diaryContent);
+                    //传递作者
+                    intent.putExtra("author",author);
                     //传入修改标志1：表示修改原有日记内容
                     intent.putExtra("signal",1);
                     startActivity(intent);
