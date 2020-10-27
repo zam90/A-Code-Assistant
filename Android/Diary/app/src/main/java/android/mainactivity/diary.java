@@ -1,9 +1,13 @@
 package android.mainactivity;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 import org.litepal.crud.DataSupport;
 
 
 public class diary extends DataSupport{
+
     private String title;
     private String content;
     private String time;

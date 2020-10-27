@@ -95,7 +95,8 @@ public class EditActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             EditText editText=(EditText)findViewById(R.id.edit_content);
-                            String title=editText.getText().toString();
+                            EditText editTitle=(EditText)findViewById(R.id.edit_title);
+                            String title=editTitle.getText().toString();
                             String content=editText.getText().toString();
                             SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日");
                             String time=sdf.format(new java.util.Date());
