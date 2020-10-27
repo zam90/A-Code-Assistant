@@ -50,7 +50,7 @@ public class EditActivity extends AppCompatActivity {
                 String title=editTitle.getText().toString();
                 String content=editText.getText().toString();
                 //获得用户名
-                SharedPreferences pref = getSharedPreferences("com.example.a15711.diarypractice_preferences", Context.MODE_PRIVATE);
+                SharedPreferences pref = getSharedPreferences("com.zamcenter.app.diary_preferences", Context.MODE_PRIVATE);
                 String author = pref.getString("account","");
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
                 String time=sdf.format(new java.util.Date());
@@ -105,7 +105,7 @@ public class EditActivity extends AppCompatActivity {
                             String title=editTitle.getText().toString();
                             String content=editText.getText().toString();
                             //获得用户名
-                            SharedPreferences pref = getSharedPreferences("com.example.a15711.diarypractice_preferences", Context.MODE_PRIVATE);
+                            SharedPreferences pref = getSharedPreferences("com.zamcenter.app.diary_preferences", Context.MODE_PRIVATE);
                             String author = pref.getString("account","");
                             SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
                             String time=sdf.format(new java.util.Date());
