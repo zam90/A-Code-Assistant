@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity{
                     //结束当前活动
                     finish();
                 }
-                if(account.equals("ZJY")&&password.equals("123456")){
+                else if(account.equals("ZJY")&&password.equals("123456")){
                     editor=pref.edit();
                     //“是否保存密码”勾选
                     if(savePassword.isChecked()){
