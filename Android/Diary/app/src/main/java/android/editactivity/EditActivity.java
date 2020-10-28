@@ -62,8 +62,7 @@ public class EditActivity extends AppCompatActivity {
                     signal=3;
                     //显示登录成功并跳转到主界面活动
                     Toast.makeText(EditActivity.this,"保存成功！",Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(EditActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    finish();
                 }
                 //更新原有内容的就只更新
                 else{
@@ -78,8 +77,7 @@ public class EditActivity extends AppCompatActivity {
                     DataSupport.updateAll(diary.class,values,"content=?",diaryContent);
                     //显示登录成功并跳转到主界面活动
                     Toast.makeText(EditActivity.this,"保存成功！",Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(EditActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    finish();
                 }
                 //隐藏光标并收起键盘
                 editText.setCursorVisible(false);

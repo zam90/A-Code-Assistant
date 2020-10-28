@@ -155,7 +155,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="18sp"
             android:text="登录"
-            android:background="#0077b6"/>
+            android:background="@color/colorPrimary"/>
 
         <!--留出一些空白-->
         <TextView

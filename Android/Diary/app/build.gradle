@@ -7,8 +7,8 @@ android {
         applicationId "com.zamcenter.app.diary"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 13
-        versionName "1.2.1"
+        versionCode 1132
+        versionName "1.2.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
