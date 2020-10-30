@@ -7,13 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<meta http-equiv="Refresh" content="2,url=index.jsp">
+<meta http-equiv="Refresh" content="1,url=signin.jsp">
 <head>
-    <title>登录成功</title>
+    <title>错误！</title>
 </head>
 <body>
 <br>
-<h1><center>登录成功！</center></h1>
+<h1><center>您未按系统流程登录，出现错误！</center></h1>
 <h3><center>请等待页面自动跳转...</center></h3>
 </body>
 </html>
