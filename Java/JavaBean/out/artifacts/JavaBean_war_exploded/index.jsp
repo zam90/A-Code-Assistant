@@ -4,6 +4,7 @@
 <%@ page import="jakarta.servlet.http.Cookie" %>
 <%@ page import="DAO.StudentDAO" %>
 <%@ page import="VO.Student" %>
+<%@ page import="java.io.IOException" %>
 <html>
 
 <!--标题-->
@@ -15,6 +16,7 @@
 
 <body>
 <%
+    try{
     Student student = null;
     Cookie[] cookies = request.getCookies();
     String ssid = "";
@@ -54,5 +56,10 @@
       </tr>
   </table>
 </form>
-</body>
+<% } catch (NumberFormatException | IOException e) {
+    response.sendRedirect("fail.jsp");
+    e.printStackTrace();
+}
+%>
+    </body>
 </html>
