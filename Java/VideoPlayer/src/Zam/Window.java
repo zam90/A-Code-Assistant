@@ -35,6 +35,7 @@ public class Window extends JFrame {
     private JButton btnPlay;
     private JButton btnPause;
     private JButton btnStop;
+    private JButton btnMute;
     private JPanel controlpanel;
     private JProgressBar progress;
     private JMenuBar menuBar;
@@ -120,6 +121,9 @@ public class Window extends JFrame {
         btnPause = new JButton("暂停");
         controlpanel.add(btnPause);
 
+        btnMute = new JButton("静音");
+        controlpanel.add(btnMute);
+
         slider = new JSlider();
         slider.setValue(100);
         slider.setMaximum(120);
@@ -158,6 +162,12 @@ public class Window extends JFrame {
             public void mouseClicked(MouseEvent e) {
 
                 PlayerMain.stop();
+            }
+        });
+        btnMute.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                PlayerMain.mute();
             }
         });
     }

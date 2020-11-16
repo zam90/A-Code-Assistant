@@ -26,7 +26,7 @@ public class PlayerMain {
                 try {
                     frame = new Window();
                     frame.setVisible(true);
-                    frame.getMediaPlayer().prepareMedia("d:\\HTML5播放器对比Flash插件.mp4");
+                    frame.getMediaPlayer().prepareMedia("C:\\Users\\Zam90\\Desktop\\新闻中心\\资料\\北京信息科技大学计算机学院宣传片.mp4");
                     new SwingWorker<String , Integer>() {
 
                         @Override
@@ -65,6 +65,10 @@ public class PlayerMain {
     //停止按钮
     public static void stop(){
         frame.getMediaPlayer().stop();
+    }
+    //静音按钮
+    public static void mute(){
+        frame.getMediaPlayer().mute();
     }
     //跳转按钮
     public static void jumpTo(float to){
