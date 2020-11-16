@@ -82,7 +82,7 @@
                 </td>
                 <td><%=book.getBookCount()%>
                 </td>
-                <td><a class="btn btn-primary" href="javascript:bookout(<%=book.getBookId()%>);">借阅</a></td>
+                <td><a class="btn btn-primary" href="javascript:bookout('<%=book.getBookId()%>');">借阅</a></td>
             </tr>
             <%
                 }

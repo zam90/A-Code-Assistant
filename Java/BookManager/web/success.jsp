@@ -13,6 +13,7 @@
 </head>
 <body>
 <br>
+<h3><center>借阅成功！</center></h3>
 <h3><center>请等待页面自动跳转...</center></h3>
 </body>
 </html>

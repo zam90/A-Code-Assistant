@@ -13,7 +13,7 @@
 <!-- 网页使用的语言 -->
 <html lang="zh-CN">
 <head>
-    <title>借阅记录</title>
+    <title>还书</title>
 
     <!-- 1. 导入CSS的全局样式 -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,7 +67,10 @@
         <a class="btn btn-primary" href="stuInf.jsp" id="stuInf">个人信息</a>
     </div>
     <div style="float: right;margin:5px">
-        <a class="btn btn-primary" href="index.jsp" id="bookRecord">借书</a>
+        <a class="btn btn-primary" href="inOutRecord.jsp" id="bookRecord">借阅记录</a>
+    </div>
+    <div style="float: right;margin:5px">
+        <a class="btn btn-primary" href="index.jsp" id="bookout">借书</a>
     </div>
 
     <div  style="float: left;margin:5px" action=" " method="post">
@@ -101,7 +104,7 @@
                 <td><%=BookRecord.getBookId()%></td>
                 <td><%=book.getBookName()%></td>
                 <td><%=BookRecord.getTime()%></td>
-                <td><a class="btn btn-primary" href="javascript:bookin(<%=BookRecord.getBookId()%>);">还书</a></td>
+                <td><a class="btn btn-primary" href="javascript:bookin('<%=BookRecord.getBookId()%>');">还书</a></td>
             </tr>
             <%
                     }

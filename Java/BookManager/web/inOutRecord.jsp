@@ -101,7 +101,7 @@
                 <td><%=BookRecord.getBookId()%></td>
                 <td><%=book.getBookName()%></td>
                 <td><%=BookRecord.getTime()%></td>
-                <td><a class="btn btn-primary" href="javascript:bookin(<%=BookRecord.getBookId()%>);">还书</a></td>
+                <td><a class="btn btn-primary" href="javascript:bookin('<%=BookRecord.getBookId()%>');">还书</a></td>
             </tr>
             <%
                 }
