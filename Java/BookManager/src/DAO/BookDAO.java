@@ -2,6 +2,7 @@ package DAO;
 
 import Connect.JDBCUtil;
 import VO.Book;
+import VO.Student;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -87,4 +88,22 @@ public class BookDAO {
         return allBook;
     }
 
+    //查询
+    public Book searchInf(String bookId) throws Exception{
+        Connection conn = JDBCUtil.getConnection();
+        Book book = null;
+        String Sql = "select * from book where bookId = ?";
+        PreparedStatement ps = conn.prepareStatement(Sql);
+        ps.setString(1,bookId);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()){
+            book = new Book();
+            book.setBookId(rs.getString("bookId"));
+            book.setBookName(rs.getString("bookName"));
+            book.setBookClassify(rs.getString("bookClassify"));
+            book.setBookCount(rs.getInt("bookCount"));
+        }
+        JDBCUtil.free(rs,ps,conn);
+        return book;
+    }
 }

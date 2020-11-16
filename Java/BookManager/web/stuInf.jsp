@@ -48,7 +48,7 @@
         }
 %>
 <h3  align="center">个人信息</h3>
-<form name="inf" action="updateJDBC.jsp"><!--信息表单-->
+<form name="inf" action="UpdateServlet"><!--信息表单-->
     <p>
     <table cellspacing="6" cellpadding="6" align="center">
         <tr><td align="right">学号：</td><td><input type="text" name="sid" class="form-control" value="<%=student.getStuId()%>" readonly></td></tr>
@@ -60,8 +60,8 @@
     <table cellspacing="9" cellpadding="9" align="center">
         <tr>
             <td><input type="Button" value="修改" class="btn btn-primary" onclick=submit()></td>
+            <td><input type="Button" value="返回" class="btn btn-primary" onclick="window.location.href='index.jsp'"></td>
         </tr>
-
     </table>
 </form>
 <% } catch (NumberFormatException | IOException e) {

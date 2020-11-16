@@ -25,7 +25,7 @@
     <script>
         function bookout(bookId) {
             if(confirm("您确定借阅这本书么？"))
-                location.href="bookOutJDBC.jsp?bookId="+bookId;
+                location.href="bookOutServlet?bookId="+bookId;
         }
     </script>
 
@@ -42,7 +42,10 @@
         <a class="btn btn-primary" href="stuInf.jsp" id="stuInf">个人信息</a>
     </div>
     <div style="float: right;margin:5px">
-        <a class="btn btn-primary" href=" " id="bookRecord">借阅记录</a>
+        <a class="btn btn-primary" href="inOutRecord.jsp" id="bookRecord">借阅记录</a>
+    </div>
+    <div style="float: right;margin:5px">
+        <a class="btn btn-primary" href="bookin.jsp" id="bookIn">还书</a>
     </div>
 
     <div  style="float: left;margin:5px" action=" " method="post">
