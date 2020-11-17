@@ -7,13 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<meta http-equiv="Refresh" content="1,url=index.jsp">
+<meta http-equiv="Refresh" content="1,url=signin.jsp">
+<script>
+    confirm("操作成功！")
+    location.href="index.jsp";
+</script>
 <head>
-    <title>成功！</title>
+    <title>操作成功！</title>
 </head>
 <body>
-<br>
-<h3><center>借阅成功！</center></h3>
-<h3><center>请等待页面自动跳转...</center></h3>
 </body>
 </html>

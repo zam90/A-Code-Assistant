@@ -37,10 +37,10 @@ public class UpdateServlet extends HttpServlet {
             student.setStuPassword(stuPassword);
             try {
                 DAO.update(student);
-                response.sendRedirect("updatesuccess.jsp");
+                response.sendRedirect("success.jsp");
             } catch (Exception e) {
                 e.printStackTrace();
-                response.sendRedirect("updatefail.jsp");
+                response.sendRedirect("fail.jsp");
             }
         } catch (NumberFormatException | IOException e) {
             response.sendRedirect("fail.jsp");

@@ -11,7 +11,7 @@
 <body>
 
 <h2  align="center">登录</h2>
-<form name="inf" action="signinJDBC.jsp"><!--信息表单-->
+<form name="inf" action="studentsigninServlet"><!--信息表单-->
     <p>
     <table cellspacing="6" cellpadding="6" align="center">
         <tr><td align="right">学号：</td><td><input type="text" name="stuId"></td></tr>

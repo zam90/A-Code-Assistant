@@ -28,9 +28,9 @@
     </style>
 
     <script>
-        function bookin(bookId) {
+        function bookin(stuId, bookId, time) {
             if(confirm("您确定归还这本书么？"))
-                location.href="bookInServlet?bookId="+bookId;
+                location.href="bookInServlet?stuId="+stuId+"&bookId="+bookId+"&time="+time;
         }
     </script>
 
@@ -70,25 +70,12 @@
         <a class="btn btn-primary" href="index.jsp" id="bookRecord">借书</a>
     </div>
 
-    <div  style="float: left;margin:5px" action=" " method="post">
-        <form class="form-inline">
-            <div class="form-group">
-                <label for="exampleInputEmail2">名称</label>
-                <input type="text"  name="bookName" value=" " class="form-control" id="exampleInputEmail2" >
-            </div>
-            <div class="form-group">
-                <label for="exampleInputName3">分类</label>
-                <input type="text" name="bookClassify"value=" " class="form-control" id="exampleInputName3" >
-            </div>
-            <button type="submit" class="btn btn-default">查询</button>
-        </form>
-    </div>
     <form  id="formout" action=" " method="post">
         <table border="1" class="table table-bordered table-hover">
             <tr class="success">
                 <th>编号</th>
                 <th>书名</th>
-                <th>时间</th>
+                <th>借阅时间</th>
                 <th>操作</th>
             </tr>
             <%
@@ -101,7 +88,7 @@
                 <td><%=BookRecord.getBookId()%></td>
                 <td><%=book.getBookName()%></td>
                 <td><%=BookRecord.getTime()%></td>
-                <td><a class="btn btn-primary" href="javascript:bookin('<%=BookRecord.getBookId()%>');">还书</a></td>
+                <td><a class="btn btn-primary" href="javascript:bookin('<%=student.getStuId()%>','<%=book.getBookId()%>','<%=BookRecord.getTime()%>');">还书</a></td>
             </tr>
             <%
                 }
@@ -112,26 +99,12 @@
 
 <div class="container">
     <h3 style="text-align: center">已归还图书</h3>
-
-    <div  style="float: left;margin:5px" action=" " method="post">
-        <form class="form-inline">
-            <div class="form-group">
-                <label for="exampleInputEmail2">名称</label>
-                <input type="text"  name="bookName" value=" " class="form-control" id="exampleInputEmail2" >
-            </div>
-            <div class="form-group">
-                <label for="exampleInputName3">分类</label>
-                <input type="text" name="bookClassify"value=" " class="form-control" id="exampleInputName3" >
-            </div>
-            <button type="submit" class="btn btn-default">查询</button>
-        </form>
-    </div>
     <form  id="formin" action=" " method="post">
         <table border="1" class="table table-bordered table-hover">
             <tr class="success">
                 <th>编号</th>
                 <th>书名</th>
-                <th>时间</th>
+                <th>归还时间</th>
                 <th>状态</th>
             </tr>
             <%

@@ -38,9 +38,7 @@
 </head>
 <body>
 <%
-    BookDAO DAO = new BookDAO();
-    List<Book> books = DAO.bookAll();
-    request.setAttribute("books",books);
+    List<Book> books = (List<Book>) request.getAttribute("books");
 %>
 <div class="container">
     <h3 style="text-align: center">图书列表</h3>
@@ -52,20 +50,6 @@
     </div>
     <div style="float: right;margin:5px">
         <a class="btn btn-primary" href="bookin.jsp" id="bookIn">还书</a>
-    </div>
-
-    <div  style="float: left;margin:5px" action=" " method="post">
-        <form class="form-inline" action="allBookSearchServlet"  >
-            <div class="form-group">
-                <label for="exampleInputEmail2">名称</label>
-                <input type="text"  name="bookName" value="" class="form-control" id="exampleInputEmail2" >
-            </div>
-            <div class="form-group">
-                <label for="exampleInputName3">分类</label>
-                <input type="text" name="bookClassify"value="" class="form-control" id="exampleInputName3" >
-            </div>
-            <button type="submit" class="btn btn-default">查询</button>
-        </form>
     </div>
     <form  id="form" action=" " method="post">
         <table border="1" class="table table-bordered table-hover">

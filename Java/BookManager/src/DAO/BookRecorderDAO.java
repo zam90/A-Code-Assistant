@@ -32,7 +32,7 @@ public class BookRecorderDAO {
         return BookRecords;
     }
 
-    //查询已归还的图书
+    //查询所有未归还的图书
     public List<BookRecord> bookOut(String stuId) throws Exception{
         Connection conn = JDBCUtil.getConnection();
         List<BookRecord> BookRecords = new ArrayList<BookRecord>();
@@ -51,4 +51,23 @@ public class BookRecorderDAO {
         return BookRecords;
     }
 
+    //按条件查询未归还的图书
+    public List<BookRecord> bookOutSearch(String stuId, String bookName) throws Exception{
+        Connection conn = JDBCUtil.getConnection();
+        List<BookRecord> BookRecords = new ArrayList<BookRecord>();
+        String Sql = "select * from bookout where stuId = ? and bookName = ?";
+        PreparedStatement ps = conn.prepareStatement(Sql);
+        ps.setString(1,stuId);
+        ps.setString(2,bookName);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()){
+            BookRecord bookrecord = new BookRecord();
+            bookrecord.setStuId(rs.getString("stuId"));
+            bookrecord.setBookId(rs.getString("bookId"));
+            bookrecord.setTime(rs.getTimestamp("timeOut"));
+            BookRecords.add(bookrecord);
+        }
+        JDBCUtil.free(rs,ps,conn);
+        return BookRecords;
+    }
 }

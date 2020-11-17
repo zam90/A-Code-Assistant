@@ -8,12 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <meta http-equiv="Refresh" content="1,url=signin.jsp">
+<script>
+    confirm("登录失败！")
+    location.href="signin.jsp";
+</script>
 <head>
-    <title>登录失败</title>
+    <title>登录失败！</title>
 </head>
 <body>
-<br>
-<h1><center>登录失败！</center></h1>
-<h3><center>请返回重新登录...</center></h3>
 </body>
 </html>
