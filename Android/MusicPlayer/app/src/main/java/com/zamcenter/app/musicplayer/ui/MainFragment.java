@@ -24,6 +24,10 @@ import com.zamcenter.app.musicplayer.ServiceImpl.MusicServiceImpl;
 
 import java.lang.ref.WeakReference;
 
+
+/*
+* footer界面
+*/
 public class MainFragment extends Fragment {
     private static final String TAG = "MainFragment";
     private static final int REFRESH_FOOTER = 3;
@@ -62,7 +66,7 @@ public class MainFragment extends Fragment {
     }
 
     /**
-     * 初始化main布局
+     * 初始化footer布局
      */
     private void initMainView() {
         musicService = MusicServiceImpl.getInstance(getContext());
@@ -130,6 +134,7 @@ public class MainFragment extends Fragment {
         }
     }
 
+    //刷新footer
     private void refreshFooter() {
         new Thread(new Runnable() {
             @Override

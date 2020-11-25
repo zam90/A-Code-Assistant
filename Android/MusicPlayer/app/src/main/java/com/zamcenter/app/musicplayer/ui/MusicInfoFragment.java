@@ -25,7 +25,9 @@ import com.zamcenter.app.musicplayer.Service.MusicService;
 import com.zamcenter.app.musicplayer.ServiceImpl.MusicServiceImpl;
 
 import java.lang.ref.WeakReference;
-
+/*
+* 歌曲播放界面
+* */
 public class MusicInfoFragment extends Fragment {
     private static final String TAG = "MusicInfoFragment";
     private static final int REFRESH_SEEKBAR_PROGRESS = 1;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00BCD4</color>
-    <color name="colorPrimaryDark">#0097A7</color>
-    <color name="colorAccent">#03A9F4</color>
+    <color name="colorPrimary">#DC143C</color>
+    <color name="colorPrimaryDark">#DC143C</color>
+    <color name="colorAccent">#DC143C</color>
     <!-- 自定义 -->
     <color name="black">#000</color>
     <color name="reb">#DC143C</color>

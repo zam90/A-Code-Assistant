@@ -31,6 +31,8 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
+/*歌单列表*/
+
 public class MainContentFragment extends Fragment {
     private static final String TAG = "MainContentFragment";
 
@@ -68,8 +70,7 @@ public class MainContentFragment extends Fragment {
     }
 
     private void initView() {
-
-        //歌单
+        //查歌单
         ListView listView = view.findViewById(R.id.main_listView_songSheet);
         final List<SongSheetBean> data = songSheetService.findAll();
         final SongSheetAdapter songSheetAdapter = new SongSheetAdapter(getContext(), data);

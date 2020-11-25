@@ -11,7 +11,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
-
+/*
+* 资源图处理类
+* */
 public class RoundImageView extends AppCompatImageView {
     private float width;
     private float height;

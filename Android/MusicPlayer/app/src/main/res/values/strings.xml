@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">盒子音乐</string>
+    <string name="app_name">简约音乐</string>
     <!--主页头部-->
-    <string name="main_head_my">盒子音乐</string>
+    <string name="main_head_my">简约音乐</string>
     <!--主页内容-->
     <string name="main_content_title_songSheet">所有歌曲</string>
 

@@ -23,6 +23,8 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+/*歌单主界面*/
+
 public class SongContentFragment extends Fragment {
     private static final String TAG = "SongContentFragment";
     private static SongContentFragment songContentFragment;

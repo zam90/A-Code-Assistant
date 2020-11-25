@@ -24,13 +24,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //初始化数据库
         LitePal.initialize(this);
+        //隐藏最上方工具栏
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.hide();
         }
+        //将碎片和activity绑定
         initMainFragment(savedInstanceState);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);//避免点击editText时，软键盘遮挡输入框
+        //避免点击editText时，软键盘遮挡输入框
+        //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
     private void initMainFragment(Bundle bundle) {
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //初始化footer
     public void enterMusicInfoFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -56,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
+    //初始化歌单列表碎片
     public void enterSongContentFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = fragmentManager.findFragmentByTag(SongContentFragment.class.getName());
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
+    //设置返回键方法
     @Override
     public void onBackPressed() {
         FragmentManager fragmentManager = getSupportFragmentManager();

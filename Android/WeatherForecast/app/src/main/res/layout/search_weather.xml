@@ -37,7 +37,7 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_toRightOf="@+id/edit_city"
-            android:background="#8fbc8f"
+            android:background="#1e90ff"
             android:gravity="center"
             android:text="查询"
             android:textColor="#ffffff" />
@@ -50,7 +50,7 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_toRightOf="@+id/search_w_btn"
-            android:background="#8fbc8f"
+            android:background="#1e90ff"
             android:gravity="center"
             android:text="关注"
             android:textColor="#ffffff" />

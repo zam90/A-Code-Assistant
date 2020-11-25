@@ -25,22 +25,23 @@
             android:layout_height="30dp"
             android:layout_below="@+id/date"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
+            android:gravity="right"
             android:text="白天"
             android:textColor="#1e90ff"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/day_weather"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
+            android:layout_width="160sp"
+            android:layout_height="90sp"
             android:layout_below="@+id/day"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:layout_toLeftOf="@+id/center_fill"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/center_fill"
             android:gravity="center"
             android:text="小雨"
-            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
             android:textStyle="bold" />
 
         <TextView
@@ -52,27 +53,29 @@
 
         <TextView
             android:id="@+id/day_temp"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
+            android:layout_width="160sp"
+            android:layout_height="30sp"
             android:layout_below="@+id/day"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="20dp"
-            android:layout_toRightOf="@+id/center_fill"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/center_fill"
             android:gravity="center"
             android:text="11℃"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/day_wind"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
+            android:layout_width="160sp"
+            android:layout_height="30sp"
             android:layout_below="@+id/day_temp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_toLeftOf="@+id/center_fill"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/day_weather"
             android:gravity="center"
             android:text="北风"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -85,14 +88,15 @@
 
         <TextView
             android:id="@+id/day_power"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
-            android:layout_below="@+id/day_temp"
+            android:layout_width="160sp"
+            android:layout_height="30sp"
+            android:layout_below="@+id/day_wind"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/center_fill2"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/center_fill2"
             android:gravity="center"
             android:text="≤3级"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -103,7 +107,7 @@
             android:layout_below="@+id/day_power"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:gravity="center"
+            android:gravity="right"
             android:text="夜间"
             android:textSize="20sp"
             android:textColor="#1e90ff"
@@ -111,15 +115,16 @@
 
         <TextView
             android:id="@+id/night_weather"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
+            android:layout_width="160sp"
+            android:layout_height="90sp"
             android:layout_below="@+id/night"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_toLeftOf="@+id/center_fill3"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/center_fill3"
             android:gravity="center"
             android:text="中雨"
-            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
             android:textStyle="bold" />
 
         <TextView
@@ -131,14 +136,15 @@
 
         <TextView
             android:id="@+id/night_temp"
-            android:layout_width="160dp"
-            android:layout_height="30dp"
+            android:layout_width="160sp"
+            android:layout_height="30sp"
             android:layout_below="@+id/night"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/center_fill3"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/center_fill3"
             android:gravity="center"
             android:text="8℃"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -146,12 +152,13 @@
             android:id="@+id/night_wind"
             android:layout_width="160dp"
             android:layout_height="30dp"
-            android:layout_below="@+id/night_weather"
+            android:layout_below="@+id/night_temp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:layout_toLeftOf="@+id/center_fill4"
             android:gravity="center"
             android:text="西北风"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -166,12 +173,13 @@
             android:id="@+id/night_power"
             android:layout_width="160dp"
             android:layout_height="30dp"
-            android:layout_below="@+id/night_temp"
+            android:layout_below="@+id/night_wind"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="10dp"
-            android:layout_toRightOf="@+id/center_fill4"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/center_fill4"
             android:gravity="center"
             android:text="≤3级"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
     </RelativeLayout>
