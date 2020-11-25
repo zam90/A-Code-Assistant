@@ -19,9 +19,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.zamcenter.app.musicplayer.MainActivity;
-import com.hwhhhh.musicplayer.R;
+import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.Service.SongSheetService;
 import com.zamcenter.app.musicplayer.ServiceImpl.SongSheetServiceImpl;
+import com.zamcenter.app.musicplayer.adater.SongSheetAdapter;
 import com.zamcenter.app.musicplayer.dto.SongDto;
 import com.zamcenter.app.musicplayer.entity.SongBean;
 import com.zamcenter.app.musicplayer.entity.SongSheetBean;
@@ -68,8 +69,8 @@ public class MainContentFragment extends Fragment {
 
     private void initView() {
 
-        //添加歌曲列表
-/*        ListView listView = view.findViewById(R.id.main_listView_songSheet);
+        //歌单
+        ListView listView = view.findViewById(R.id.main_listView_songSheet);
         final List<SongSheetBean> data = songSheetService.findAll();
         final SongSheetAdapter songSheetAdapter = new SongSheetAdapter(getContext(), data);
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -90,7 +91,8 @@ public class MainContentFragment extends Fragment {
                     mainActivity.enterSongContentFragment();
                 }
             }
-        });*/
+        });
+
     }
 
 }

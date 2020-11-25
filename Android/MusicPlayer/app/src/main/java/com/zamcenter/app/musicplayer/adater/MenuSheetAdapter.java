@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.hwhhhh.musicplayer.R;
+import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.entity.SongSheetBean;
 
 import org.litepal.LitePal;

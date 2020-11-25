@@ -18,15 +18,13 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.hwhhhh.musicplayer.R;
+import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.Service.MusicChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicPlayingChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicService;
 import com.zamcenter.app.musicplayer.ServiceImpl.MusicServiceImpl;
 
 import java.lang.ref.WeakReference;
-
-//音乐播放界面
 
 public class MusicInfoFragment extends Fragment {
     private static final String TAG = "MusicInfoFragment";
@@ -94,6 +92,7 @@ public class MusicInfoFragment extends Fragment {
         });
 
         textView_title.setText(musicService.getCurrentMusicInfo());
+
 
         imageView_last.setOnClickListener(new View.OnClickListener() {
             @Override

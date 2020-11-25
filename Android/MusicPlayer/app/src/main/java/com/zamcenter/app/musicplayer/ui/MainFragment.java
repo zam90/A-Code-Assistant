@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.zamcenter.app.musicplayer.MainActivity;
-import com.hwhhhh.musicplayer.R;
+import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.Service.MusicChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicPlayingChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicService;
@@ -80,6 +80,16 @@ public class MainFragment extends Fragment {
             }
         });
 
+        //footer中的上一首按钮
+        final ImageView ImageView_last = view.findViewById(R.id.main_footer_last);
+        ImageView_last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                musicService.last();
+            }
+        });
+
+        //footer中的下一首按钮
         final ImageView ImageView_next = view.findViewById(R.id.main_footer_next);
         ImageView_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,13 +98,6 @@ public class MainFragment extends Fragment {
             }
         });
 
-        final ImageView ImageView_last = view.findViewById(R.id.main_footer_last);
-        ImageView_last.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                musicService.last();
-            }
-        });
         textView_song = view.findViewById(R.id.main_footer_song);
         textView_song.setText(musicService.getCurrentMusicInfo());
         musicService.setMusicChangedListener(new MusicChangedListener() {

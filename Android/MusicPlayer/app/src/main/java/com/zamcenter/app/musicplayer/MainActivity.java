@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
 
-import com.hwhhhh.musicplayer.R;
+import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.ui.MainContentFragment;
 import com.zamcenter.app.musicplayer.ui.MainFragment;
 import com.zamcenter.app.musicplayer.ui.MusicInfoFragment;

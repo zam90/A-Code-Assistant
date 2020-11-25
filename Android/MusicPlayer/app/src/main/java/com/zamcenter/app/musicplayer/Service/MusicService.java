@@ -1,6 +1,5 @@
 package com.zamcenter.app.musicplayer.Service;
 
-//音乐播放功能接口
 
 public interface MusicService {
     int PLAY_ORDER = 1;
@@ -24,6 +23,11 @@ public interface MusicService {
      */
     void onResume();
 
+    /**
+     * 更改播放顺序
+     * @param i i为PLAY_ORDER时，为顺序播放；为PLAY_RANDOM为随机播放
+     */
+    void setPlayOrder(int i);
 
     /**
      * 下一首
@@ -46,6 +50,11 @@ public interface MusicService {
      */
     void onDestroy();
 
+    /**
+     * 获取播放顺序
+     * @return 1 为顺序播放， 4 为随机播放
+     */
+    int getPlayOrder();
 
     /**
      * 获取当前播放音乐的信息

@@ -15,7 +15,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hwhhhh.musicplayer.R;
+import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.Service.SongSheetService;
 import com.zamcenter.app.musicplayer.ServiceImpl.SongSheetServiceImpl;
 import com.zamcenter.app.musicplayer.dto.SongDto;
@@ -100,39 +100,8 @@ public class SongAdapter extends BaseAdapter {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
-                    case R.id.menu_song_addToSheet:
-                        AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                        final Dialog dialog = builder.create();
-                        ListView listView = v.findViewById(R.id.dialog_list);
-                        listView.setAdapter(new MenuSheetAdapter(mContext));
-                        dialog.show();
-                        if (dialog.getWindow() != null) {
-                            dialog.getWindow().setContentView(v);
-                        }
-                        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                SongSheetBean songSheetBean = (SongSheetBean) adapterView.getItemAtPosition(i);
-                                SongSheetService songSheetService = new SongSheetServiceImpl();
-                                if (songSheetService.addSongBean(songBean, songSheetBean)) {
-                                    Toast.makeText(mContext, "添加成功！", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(mContext, "添加失败！", Toast.LENGTH_SHORT).show();
-                                }
-                                dialog.dismiss();
-                            }
-                        });
-                        break;
-                    case R.id.menu_song_delete:
-                        if (songBean.getSongSheetId() != 1) {
-                            songBean.setSongSheetId(1);
-                            songBean.save();
-                            Toast.makeText(mContext, "删除成功！", Toast.LENGTH_SHORT).show();
-                            songDto.getSongBeanList().remove(songBean);
-                            songAdapter.notifyDataSetChanged();
-                        } else {
-                            Toast.makeText(mContext, "删除失败！为本地音乐！", Toast.LENGTH_SHORT).show();
-                        }
+                    case R.id.menu_song_download:
+                        Toast.makeText(mContext, "暂未实现！", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }

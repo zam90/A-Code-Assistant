@@ -9,12 +9,12 @@ import android.util.Log;
 import com.zamcenter.app.musicplayer.Service.MusicChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicPlayingChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicService;
+import com.zamcenter.app.musicplayer.Service.SongSheetService;
+import com.zamcenter.app.musicplayer.entity.SongBean;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
-
-//音乐播放功能接口实现
 
 public class MusicServiceImpl implements MusicService {
     private static final String TAG = "MusicServiceImpl";
@@ -35,17 +35,17 @@ public class MusicServiceImpl implements MusicService {
             musicNames = assetManager.list("music");    //获取assets/music下所有文件
             if (musicNames != null) {
                 randomNames = new String[musicNames.length];
-//                SongSheetService songSheetService = new SongSheetServiceImpl();
+                SongSheetService songSheetService = new SongSheetServiceImpl();
                 //深拷贝
                 for (int i = 0; i < musicNames.length; i++) {
                     randomNames[i] = musicNames[i];
-//运行一次即可，用于将本地音乐存入SongBean
-//                    SongBean songBean = new SongBean(musicNames[i], songSheetService.findAll().get(0).getId());
-//                    if (songBean.save()) {
-//                        Log.d(TAG, "MusicServiceImpl: save " + musicNames[i] + "successfully!");
-//                    } else {
-//                        Log.d(TAG, "MusicServiceImpl: default!");
-//                    }
+                    //运行一次即可，用于将本地音乐存入SongBean
+                    SongBean songBean = new SongBean(musicNames[i], songSheetService.findAll().get(0).getId());
+                    if (songBean.save()) {
+                        Log.d(TAG, "MusicServiceImpl: save " + musicNames[i] + "successfully!");
+                    } else {
+                        Log.d(TAG, "MusicServiceImpl: default!");
+                    }
                 }
                 currentMusicName = musicNames[0];
                 loadMusic(currentMusicName);
@@ -143,6 +143,19 @@ public class MusicServiceImpl implements MusicService {
         }
     }
 
+    @Override
+    public void setPlayOrder(int i) {
+        if (i == PLAY_ORDER) {
+            order = PLAY_ORDER;
+            currentIndex = Arrays.binarySearch(musicNames, currentMusicName);     //二分法查找当前播放音乐的索引
+            Log.d(TAG, "setPlayOrder: currentIndex order " + currentIndex);
+        } else {
+            order = PLAY_RANDOM;
+            shuffleCard(musicNames);
+            currentIndex = search(randomNames, currentMusicName);    //二分法查找当前播放音乐的索引
+            Log.d(TAG, "setPlayOrder: currentIndex random " + currentIndex);
+        }
+    }
 
     @Override
     public void next() {
@@ -198,6 +211,28 @@ public class MusicServiceImpl implements MusicService {
         mediaPlayer.release();
     }
 
+    /**
+     * 洗牌算法
+     * @param names 顺序播放的musicNames
+     */
+    private void shuffleCard(String[] names) {
+        int len = names.length;
+        Random r = new Random();
+        for (int i = 0; i < len; i++) {
+            int index = r.nextInt(len);
+            String temp = randomNames[i];
+            randomNames[i] = randomNames[index];
+            randomNames[index] = temp;
+        }
+        for (int i = 0; i < len; i++) {
+            Log.d(TAG, "shuffleCard: random " + randomNames[i]);
+        }
+    }
+
+    @Override
+    public int getPlayOrder() {
+        return order;
+    }
 
     @Override
     public String getCurrentMusicInfo() {

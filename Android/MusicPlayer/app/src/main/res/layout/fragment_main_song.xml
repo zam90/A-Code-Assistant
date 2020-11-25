@@ -26,7 +26,7 @@
         android:gravity="start|bottom"
         android:textSize="20sp"
         android:textColor="@color/black"
-        tools:text="我喜欢的音乐"
+        tools:text="歌单"
         app:layout_constraintStart_toEndOf="@id/song_cover"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -34,7 +34,7 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:text="@string/hwhhhh"
+        android:text="@string/ZamCenter"
         android:textSize="20sp"
         android:gravity="start|top"
         android:paddingLeft="31dp"

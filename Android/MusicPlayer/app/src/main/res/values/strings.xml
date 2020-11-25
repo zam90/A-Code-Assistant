@@ -1,12 +1,11 @@
 <resources>
-    <string name="app_name">MusicPlayer</string>
+    <string name="app_name">盒子音乐</string>
     <!--主页头部-->
     <string name="main_head_my">盒子音乐</string>
     <!--主页内容-->
-    <string name="main_content_title_songSheet">当前歌单</string>
+    <string name="main_content_title_songSheet">所有歌曲</string>
 
-    <string name="hwhhhh">hwhhhh</string>
+    <string name="ZamCenter">ZamCenter</string>
 
-    <string name="menu_delete">删除</string>
-    <string name="menu_addToSheet">添加到歌单</string>
+    <string name="menu_download">下载</string>
 </resources>

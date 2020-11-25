@@ -23,7 +23,13 @@ public class SongSheetServiceImpl implements SongSheetService {
 
     @Override
     public List<SongSheetBean> findAll() {
-        return LitePal.findAll(SongSheetBean.class);
+        if(LitePal.findAll(SongSheetBean.class).size() == 0){
+            SongSheetBean songSheet = new SongSheetBean("所有歌曲", null);
+            songSheet.save();
+            return LitePal.findAll(SongSheetBean.class);
+        }else{
+            return LitePal.findAll(SongSheetBean.class);
+        }
     }
 
     @Override
