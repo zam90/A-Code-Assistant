@@ -1,0 +1,2 @@
+F:\GitHub\A-Code-Assistant\C++\Thread\Thread\Debug\Thread.exe
+F:\GitHub\A-Code-Assistant\C++\Thread\Thread\Debug\Thread.pdb
