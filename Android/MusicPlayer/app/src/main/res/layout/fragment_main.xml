@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:background="@drawable/main_head_underline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.zamcenter.app.musicplayer.utils.RoundImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/ic_disk"/>
+
+        <TextView
+            android:id="@+id/main_footer_song"
+            android:layout_width="180sp"
+            android:layout_height="60sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginLeft="15sp"
+            tools:text="歌名\n歌手"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="5sp"
+            android:textColor="@color/dimGrey"/>
+
+        <ImageView
+            android:id="@+id/main_footer_last"
+            android:layout_marginRight="5sp"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_last_black"/>
+
+        <ImageView
+            android:id="@+id/main_footer_play"
+            android:layout_marginRight="5sp"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:src="@drawable/ic_play_red"/>
+
+        <ImageView
+            android:id="@+id/main_footer_next"
+            android:layout_marginRight="5sp"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:src="@drawable/ic_next_black"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_footer"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

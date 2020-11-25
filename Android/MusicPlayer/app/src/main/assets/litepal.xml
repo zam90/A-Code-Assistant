@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="SongSheet"/>
+    <version value="3"/>
+    <list>
+        <mapping class="com.zamcenter.app.musicplayer.entity.SongSheetBean"></mapping>
+        <mapping class="com.zamcenter.app.musicplayer.entity.SongBean"></mapping>
+    </list>
+    <case value="keep"></case>
+</litepal>
