@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="今天"
+            android:textColor="#48d1cc"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="320dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/date"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="白天"
+            android:textColor="#1e90ff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/day_weather"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/center_fill"
+            android:gravity="center"
+            android:text="小雨"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/center_fill"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/day_temp"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/center_fill"
+            android:gravity="center"
+            android:text="11℃"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/day_wind"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day_temp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/center_fill"
+            android:gravity="center"
+            android:text="北风"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/center_fill2"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day_weather"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/day_power"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day_temp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/center_fill2"
+            android:gravity="center"
+            android:text="≤3级"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/night"
+            android:layout_width="320dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/day_power"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="夜间"
+            android:textSize="20sp"
+            android:textColor="#1e90ff"
+            />
+
+        <TextView
+            android:id="@+id/night_weather"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/night"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/center_fill3"
+            android:gravity="center"
+            android:text="中雨"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/center_fill3"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/night"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/night_temp"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/night"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/center_fill3"
+            android:gravity="center"
+            android:text="8℃"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/night_wind"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/night_weather"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/center_fill4"
+            android:gravity="center"
+            android:text="西北风"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/center_fill4"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/night_weather"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/night_power"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/night_temp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/center_fill4"
+            android:gravity="center"
+            android:text="≤3级"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

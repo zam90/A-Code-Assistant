@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">小天气</string>
+    <drawable name="bg_normal">#c7c7c7</drawable>
+    <drawable name="bg_change">#8deeee</drawable>
+</resources>
