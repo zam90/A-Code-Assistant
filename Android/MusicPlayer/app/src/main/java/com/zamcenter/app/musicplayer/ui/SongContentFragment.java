@@ -17,7 +17,7 @@ import com.zamcenter.app.musicplayer.Service.MusicService;
 import com.zamcenter.app.musicplayer.ServiceImpl.MusicServiceImpl;
 import com.zamcenter.app.musicplayer.adater.SongAdapter;
 import com.zamcenter.app.musicplayer.dto.SongDto;
-import com.zamcenter.app.musicplayer.entity.SongBean;
+import com.zamcenter.app.musicplayer.VO.SongBean;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

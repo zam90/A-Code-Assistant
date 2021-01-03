@@ -1,8 +1,8 @@
 package com.zamcenter.app.musicplayer.ServiceImpl;
 
 import com.zamcenter.app.musicplayer.Service.SongSheetService;
-import com.zamcenter.app.musicplayer.entity.SongBean;
-import com.zamcenter.app.musicplayer.entity.SongSheetBean;
+import com.zamcenter.app.musicplayer.VO.SongBean;
+import com.zamcenter.app.musicplayer.VO.SongSheetBean;
 
 import org.litepal.LitePal;
 
@@ -23,6 +23,7 @@ public class SongSheetServiceImpl implements SongSheetService {
 
     @Override
     public List<SongSheetBean> findAll() {
+        //如果歌单数为0，创建新歌单 将assert中的music存入SongBean
         if(LitePal.findAll(SongSheetBean.class).size() == 0){
             SongSheetBean songSheet = new SongSheetBean("所有歌曲", null);
             songSheet.save();

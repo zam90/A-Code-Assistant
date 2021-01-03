@@ -1,7 +1,7 @@
 package com.zamcenter.app.musicplayer.dto;
 
-import com.zamcenter.app.musicplayer.entity.SongBean;
-import com.zamcenter.app.musicplayer.entity.SongSheetBean;
+import com.zamcenter.app.musicplayer.VO.SongBean;
+import com.zamcenter.app.musicplayer.VO.SongSheetBean;
 
 import java.util.List;
 

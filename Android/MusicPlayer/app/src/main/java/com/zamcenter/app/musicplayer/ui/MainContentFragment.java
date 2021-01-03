@@ -1,18 +1,13 @@
 package com.zamcenter.app.musicplayer.ui;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,8 +19,8 @@ import com.zamcenter.app.musicplayer.Service.SongSheetService;
 import com.zamcenter.app.musicplayer.ServiceImpl.SongSheetServiceImpl;
 import com.zamcenter.app.musicplayer.adater.SongSheetAdapter;
 import com.zamcenter.app.musicplayer.dto.SongDto;
-import com.zamcenter.app.musicplayer.entity.SongBean;
-import com.zamcenter.app.musicplayer.entity.SongSheetBean;
+import com.zamcenter.app.musicplayer.VO.SongBean;
+import com.zamcenter.app.musicplayer.VO.SongSheetBean;
 
 import org.greenrobot.eventbus.EventBus;
 

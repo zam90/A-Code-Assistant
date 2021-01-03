@@ -3,8 +3,8 @@
     <dbname value="SongSheet"/>
     <version value="3"/>
     <list>
-        <mapping class="com.zamcenter.app.musicplayer.entity.SongSheetBean"></mapping>
-        <mapping class="com.zamcenter.app.musicplayer.entity.SongBean"></mapping>
+        <mapping class="com.zamcenter.app.musicplayer.VO.SongSheetBean"></mapping>
+        <mapping class="com.zamcenter.app.musicplayer.VO.SongBean"></mapping>
     </list>
     <case value="keep"></case>
 </litepal>

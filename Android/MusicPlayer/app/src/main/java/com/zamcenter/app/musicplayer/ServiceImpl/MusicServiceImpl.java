@@ -10,7 +10,7 @@ import com.zamcenter.app.musicplayer.Service.MusicChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicPlayingChangedListener;
 import com.zamcenter.app.musicplayer.Service.MusicService;
 import com.zamcenter.app.musicplayer.Service.SongSheetService;
-import com.zamcenter.app.musicplayer.entity.SongBean;
+import com.zamcenter.app.musicplayer.VO.SongBean;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -32,6 +32,18 @@ public class MusicServiceImpl implements MusicService {
         mediaPlayer = new MediaPlayer();
         assetManager = context.getAssets();
         try {
+/*            String result = "";
+            File 123 = new File(getExternalCacheDir(),);
+            File[] files = new File(getExternalCacheDir).listFiles();
+            for (File file : files) {
+                if (file.getName().indexOf(".mp3") >= 0) {
+
+                    result += file.getPath() + "\n";
+                }
+            }
+            if (result.equals("")){
+                Log.d(TAG, "music无文件！");
+            }*/
             musicNames = assetManager.list("music");    //获取assets/music下所有文件
             if (musicNames != null) {
                 randomNames = new String[musicNames.length];

@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.zamcenter.app.musicplayer.R;
 import com.zamcenter.app.musicplayer.Service.SongSheetService;
 import com.zamcenter.app.musicplayer.ServiceImpl.SongSheetServiceImpl;
-import com.zamcenter.app.musicplayer.entity.SongSheetBean;
+import com.zamcenter.app.musicplayer.VO.SongSheetBean;
 
 import java.util.List;
 

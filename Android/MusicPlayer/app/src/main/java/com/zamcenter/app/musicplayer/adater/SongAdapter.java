@@ -1,26 +1,20 @@
 package com.zamcenter.app.musicplayer.adater;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zamcenter.app.musicplayer.R;
-import com.zamcenter.app.musicplayer.Service.SongSheetService;
-import com.zamcenter.app.musicplayer.ServiceImpl.SongSheetServiceImpl;
 import com.zamcenter.app.musicplayer.dto.SongDto;
-import com.zamcenter.app.musicplayer.entity.SongBean;
-import com.zamcenter.app.musicplayer.entity.SongSheetBean;
+import com.zamcenter.app.musicplayer.VO.SongBean;
+import com.zamcenter.app.musicplayer.VO.SongSheetBean;
 
 import org.litepal.LitePal;
 
@@ -101,6 +95,7 @@ public class SongAdapter extends BaseAdapter {
             public boolean onMenuItemClick(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.menu_song_download:
+
                         Toast.makeText(mContext, "暂未实现！", Toast.LENGTH_SHORT).show();
                 }
                 return false;
